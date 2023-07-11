@@ -4,7 +4,7 @@ iOS の講義で使った API を開発します。
 
 ## 講義資料
 
-./slides.pdf
+https://github.com/cookpad/cookpad-internship-2023-summer-server-public/blob/master/docs/slides.pdf
 
 ## 目次
 
