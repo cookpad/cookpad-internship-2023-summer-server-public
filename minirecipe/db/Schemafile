@@ -1,0 +1,39 @@
+create_table :users do |t|
+  t.string :name, null: false
+  t.datetime :photo_saved_at
+
+  t.timestamps
+
+  t.index :name, unique: true
+end
+
+create_table :recipes do |t|
+  t.string :title, null: false
+  t.string :description, null: false
+  t.bigint :user_id, null: false
+  t.datetime :photo_saved_at
+
+  t.timestamps
+end
+
+create_table :ingredients do |t|
+  t.bigint :recipe_id, null: false
+  t.integer :position, null: false
+  t.string :name, null: false
+  t.string :quantity
+
+  t.timestamps
+
+  t.index :recipe_id
+end
+
+create_table :steps do |t|
+  t.bigint :recipe_id, null: false
+  t.integer :position, null: false
+  t.string :memo, null: false
+  t.datetime :photo_saved_at
+
+  t.timestamps
+
+  t.index [:recipe_id, :position], unique: true
+end

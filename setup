@@ -1,0 +1,11 @@
+#!/bin/bash
+set -Cue -o pipefail
+
+CURRENT="$(cd "$(dirname "$0")" && pwd)"
+
+echo "[bff]"
+cd "${CURRENT}/bff" && ./bin/setup
+echo "[minirecipe]"
+cd "${CURRENT}/minirecipe" && ./bin/setup
+echo "[minihashtag]"
+cd "${CURRENT}/minihashtag" && ./bin/setup

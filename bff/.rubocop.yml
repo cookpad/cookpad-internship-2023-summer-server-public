@@ -1,0 +1,4 @@
+inherit_from: https://raw.githubusercontent.com/cookpad/styleguide/master/.rubocop.yml
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: either
